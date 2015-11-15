@@ -6,7 +6,12 @@
 |--------------------------------------------------------------------------
 |
 */
-
+// Setting Cloudinary
+\Cloudinary::config(array(
+	"cloud_name" => "dp0wg3gds",
+	"api_key" => "934528342182424",
+	"api_secret" => "_Q8oIzZvuVQ-FCM0qrG88Tpmpy0"
+));
 
 // **********	INSTALLATION ROUTES *********//
 Route::get('install', 'InstallController@install');

@@ -75,8 +75,9 @@ class MediaController extends BaseController {
 						
 						$input['pic'] = 1;
 					}
-					
-					if(isset($input['pic_url_multi'])){
+
+					// Comment upload multi file
+					/*if(isset($input['pic_url_multi'])){
 						$input['pic_url_multi'] = '';
 						$listDeleteImg = $input['delete_img'];
 						
@@ -100,7 +101,7 @@ class MediaController extends BaseController {
 						$input['pic_url_multi'] = trim($input['pic_url_multi'], ";");
 					} else {
 						unset($input['pic_url_multi']);
-					}
+					}*/
 				}
 				
 				unset($input['img_url']);

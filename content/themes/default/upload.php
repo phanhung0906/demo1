@@ -41,7 +41,7 @@
                 <p><input type="text" class="form-control" id="img_url" name="img_url" style="" placeholder="<?= Lang::get('lang.image_url') ?>" /></p> 
             </div>
 
-            <div id="upload_multiple_image">
+           <!-- <div id="upload_multiple_image">
                 <div id="maindiv">
                     <h2>Add Multiple Images Below <small>(optional)</small></h2>
                     <div id="formdiv">
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div id="vid_upload" style="display:none; padding-left:100px; background:#f1f1f1; padding:15px; margin-top:15px; margin-bottom:15px;">
                 <label for="vid_url">
