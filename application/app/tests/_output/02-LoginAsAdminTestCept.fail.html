@@ -1,0 +1,652 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" class=""><head>
+              <title>Ninja Media Script - Viral Fun Media Sharing Script</title>
+    
+    <meta name="viewport" content="initial-scale=1" />
+    
+    <link rel="stylesheet" href="http://ninja-media-script.com/application/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://ninja-media-script.com/application/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="http://ninja-media-script.com/application/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="http://ninja-media-script.com/application/assets/css/style.css" />
+    
+    <link rel="icon" href="http://ninja-media-script.com/content/uploads//settings/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://ninja-media-script.com/content/uploads//settings/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="http://ninja-media-script.com/application/assets/js/tagsinput/jquery.tagsinput.css" />
+    <link rel="stylesheet" href="http://ninja-media-script.com/application/assets/js/jquery-minicolors/jquery.minicolors.css" />
+    <link rel="stylesheet" href="http://ninja-media-script.com/application/assets/css/admin.css" />
+
+    <style type="text/css">
+
+
+
+	
+
+
+	
+
+
+
+
+.btn.btn-color, input[type="submit"]{
+	background:#ee222e !important;
+	color:#fff;
+	border-radius:0px;
+}
+
+h2 i{
+	color:#ee222e;
+}
+
+.btn-color:hover{
+	color:#fff;
+}
+
+.btn.btn-radio {
+	background: #ff3642;
+	color:#fff;
+}
+
+.btn.btn-radio.active {
+	background:#ee222e;
+	color:#fff;
+}
+
+#nprogress .bar {
+	background:#ee222e;
+}
+
+#nprogress .spinner-icon {
+	border-top-color:#ee222e;
+	border-left-color:#ee222e;
+}
+#nprogress .peg {
+	box-shadow: 0 0 10px #ee222e, 0 0 5px #ee222e;
+}
+
+.nav .caret, .nav&gt;li&gt;a, .navbar .navbar-nav&gt;.active&gt;a, .nav a:hover .caret{
+	color:#ee222e;
+	border-top-color:#ee222e;
+	border-bottom-color:#ee222e;
+}
+
+.navbar-nav&gt;li&gt;a.upload-btn, .navbar-inverse .navbar-nav&gt;li&gt;a:hover
+{
+	background:#ee222e;
+}
+
+.active .nav-border-bottom{
+	background:#ee222e;
+}
+
+.form-control:focus{
+	border-color:#ee222e;
+}
+
+a.spcl-button.color {
+	background-color:#ee222e;
+}
+
+.dropdown-menu&gt;li&gt;a:hover, .dropdown-menu&gt;li&gt;a:focus{
+	background:#ee222e;
+}
+
+ul.tags li a{
+	background:#ee222e;
+}
+
+div.tagsinput span.tag{
+	border:1px solid #ee222e;
+	color:#fff;
+	background:#ff3642;
+}
+
+.table-striped&gt;tbody&gt;tr:first-child&gt;th{
+	background:#ee222e;
+	border:0px;
+	color:#fff;
+}
+
+.table-striped&gt;tbody&gt;tr:first-child{
+	border:0px;
+}
+.table-striped&gt;tbody&gt;tr:nth-child(2)&gt;td{
+	border-top-color:#ff5460;
+}
+
+.pagination&gt;li&gt;a{
+	background:#bc0000;
+}
+
+.pagination&gt;li&gt;span, .pagination&gt;.active&gt;span, .pagination&gt;li&gt;a:hover, .pagination&gt;.active&gt;span:hover{
+	background:#ff5460;
+}
+
+.pagination&gt;li&gt;span:hover, .pagination&gt;.disabled&gt;span{
+	background:#ff8692;
+	color:#bc0000;
+}
+
+.pagination&gt;li&gt;a, .pagination&gt;li&gt;span, .pagination&gt;.disabled&gt;span, .pagination&gt;.disabled&gt;a, .pagination&gt;.disabled&gt;a:hover, .pagination&gt;.disabled&gt;a:focus, .pagination&gt;.active&gt;a, .pagination&gt;.active&gt;span, .pagination&gt;.active&gt;a:hover, .pagination&gt;.active&gt;span:hover, .pagination&gt;.active&gt;a:focus, .pagination&gt;.active&gt;span:focus{
+	border:1px solid #ee222e;
+}
+
+div.tagsinput span.tag a{
+	color:#bc0000;
+}
+
+a.spcl-button.color:hover {
+	background-color:#ff3642;
+	color:#fff;
+}
+
+.btn.btn-prev:hover, .btn.btn-next:hover{
+	background:#ee222e;
+}
+
+
+
+/********** SECONDARY COLOR **********/
+.home-media-like.active{
+	background:#12c3ee;
+}
+
+p.home-like-count{
+	color:#12c3ee;
+}
+
+a, a:hover, a:focus{
+	color:#12c3ee;
+}
+
+.user-menu p {
+	color:#12c3ee;
+}
+
+#next_media li a div.active, #next_media li a:hover div{
+	border-color:#12c3ee;
+}
+
+.admin-block.active, .admin-block:hover{
+	border-color:#ee222e;
+}
+
+h2.subheader{
+	border-color:#bc0000;
+	background:#ee222e;
+}
+
+.ouro:after {
+	background-color:#ee222e;
+}
+
+.ouro {
+	background-color:#ff5460;
+}
+
+h2.subheader i{
+	color:#bc0000;
+}
+
+.load-more-btn{
+	border-bottom-color:#bc0000;
+}
+
+
+.navbar.gallery-sub-header{
+	top:52px;
+}
+
+
+
+</style>
+    <!--[if lte IE 8]>
+      <script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/jquery.nearest.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/jquery.fitvid.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/jquery.timeago.js"></script>
+
+        </head>
+<body>
+
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo" href="http://ninja-media-script.com"><img src="http://ninja-media-script.com/content/uploads//settings/logo.png" style="height:35px; width:auto;" /></a>
+      
+        <div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
+
+        <div class="mobile-menu" style="height: 622px;">
+
+    
+                  <a href="http://ninja-media-script.com/user/admin" class="usr-avatar"><img src="http://ninja-media-script.com/content/uploads//avatars/default.jpg" alt="admin" class="img-circle user-avatar-large" /></a>
+      <a href="http://ninja-media-script.com/user/admin" class="username"><h2>admin</h2></a>
+      <p class="points"><i class="fa fa-star" style="color:gold"></i> 210 points</p>
+      <div id="avatar-bg"></div>
+
+    
+    <ul>
+      <li class=""><a href="http://ninja-media-script.com"><i class="fa fa-home"></i> Home</a></li>
+     <li class="dropdown ">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-star"></i> Popular <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="http://ninja-media-script.com/popular/week">for the Week</a></li>
+        <li><a href="http://ninja-media-script.com/popular/month">for the Month</a></li>
+        <li><a href="http://ninja-media-script.com/popular/year">for the Year</a></li>
+        <li><a href="http://ninja-media-script.com/popular">All Time</a></li>
+      </ul>
+    </li>
+    
+    
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle categories" data-toggle="dropdown"><i class="fa fa-folder-open"></i> Categories <b class="caret"></b></a>
+        
+        <ul class="dropdown-menu">
+            <li>
+                                  <a href="http://ninja-media-script.com/category/animals">Animals</a>
+                                  <a href="http://ninja-media-script.com/category/architecture">Architecture</a>
+                                  <a href="http://ninja-media-script.com/category/cartoon">Cartoon</a>
+                                  <a href="http://ninja-media-script.com/category/comedy">Comedy</a>
+                                  <a href="http://ninja-media-script.com/category/comics">Comics</a>
+                                  <a href="http://ninja-media-script.com/category/family">Family</a>
+                                  <a href="http://ninja-media-script.com/category/film">Film</a>
+                                  <a href="http://ninja-media-script.com/category/food">Food</a>
+                                  <a href="http://ninja-media-script.com/category/music">Music</a>
+                                  <a href="http://ninja-media-script.com/category/news">News</a>
+                                  <a href="http://ninja-media-script.com/category/retro">Retro</a>
+                                  <a href="http://ninja-media-script.com/category/sports">Sports</a>
+                                  <a href="http://ninja-media-script.com/category/uncategorized">Uncategorized</a>
+                                  <a href="http://ninja-media-script.com/category/vehicles">Vehicles</a>
+                            </li>
+          </ul>
+   </li>
+
+      <li class="dropdown ">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file-text"></i> More <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+                      
+      </ul>
+    </li>
+    
+   <li><a href="http://ninja-media-script.com/random"><i class="fa fa-random"></i> Random</a></li>
+
+</ul>  
+
+        <ul class="nav navbar-nav navbar-right">
+        
+        
+          <li class="dropdown">
+              <a href="#" class="user-menu dropdown-toggle" data-toggle="dropdown"><b class="caret"></b><div id="user-info"><h4><i class="fa fa-gear"></i> Settings</h4></div> </a>
+              <ul class="dropdown-menu">
+                                  <li><a href="http://ninja-media-script.com/admin" class="admin_link_mobile"><i class="fa fa-coffee"></i> Admin</a></li>
+                                <li><a href="http://ninja-media-script.com/user/admin"><i class="fa fa-user"></i> My Profile</a></li>
+                <li><a href="http://ninja-media-script.com/logout" id="user_logout_mobile"><i class="fa fa-power-off"></i> Logout</a></li>
+              </ul>
+            </li>
+
+                                  <li><a href="http://ninja-media-script.com/upload" class="upload-btn"><i class="fa fa-cloud-upload"></i> Upload</a></li>
+                      </ul>
+
+
+        </div>
+      </div>
+
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+      
+      <ul class="nav navbar-nav navbar-left nav-desktop">
+        <!--li><a href="#" id="categories_open"><i class="fa fa-th-list"></i> Categories</a></li-->
+        <li class=""><a href="http://ninja-media-script.com"><i class="fa fa-home"></i><span> Home</span></a><div class="nav-border-bottom"></div></li>
+         <li class="dropdown ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-star"></i><span> Popular </span><b class="caret"></b><div class="nav-border-bottom"></div></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://ninja-media-script.com/popular/week">for the Week</a></li>
+            <li><a href="http://ninja-media-script.com/popular/month">for the Month</a></li>
+            <li><a href="http://ninja-media-script.com/popular/year">for the Year</a></li>
+            <li><a href="http://ninja-media-script.com/popular">All Time</a></li>
+          </ul>
+        </li>
+        
+        
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle categories" data-toggle="dropdown"><i class="fa fa-folder-open"></i><span> Categories </span><b class="caret"></b><div class="nav-border-bottom"></div></a>
+            
+            <ul class="dropdown-menu">
+                <li>
+                                          <a href="http://ninja-media-script.com/category/animals">Animals</a>
+                                          <a href="http://ninja-media-script.com/category/architecture">Architecture</a>
+                                          <a href="http://ninja-media-script.com/category/cartoon">Cartoon</a>
+                                          <a href="http://ninja-media-script.com/category/comedy">Comedy</a>
+                                          <a href="http://ninja-media-script.com/category/comics">Comics</a>
+                                          <a href="http://ninja-media-script.com/category/family">Family</a>
+                                          <a href="http://ninja-media-script.com/category/film">Film</a>
+                                          <a href="http://ninja-media-script.com/category/food">Food</a>
+                                          <a href="http://ninja-media-script.com/category/music">Music</a>
+                                          <a href="http://ninja-media-script.com/category/news">News</a>
+                                          <a href="http://ninja-media-script.com/category/retro">Retro</a>
+                                          <a href="http://ninja-media-script.com/category/sports">Sports</a>
+                                          <a href="http://ninja-media-script.com/category/uncategorized">Uncategorized</a>
+                                          <a href="http://ninja-media-script.com/category/vehicles">Vehicles</a>
+                                    </li>
+              </ul>
+       </li>
+
+              <li class="dropdown ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file-text"></i> More <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+                                  
+          </ul>
+        </li>
+        
+      </ul>  
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://ninja-media-script.com/random" class="random"><i class="fa fa-random"></i></a></li>
+              <li><a href="http://ninja-media-script.com/upload" class="upload-btn upload-btn-desktop"><i class="fa fa-cloud-upload"></i> Upload</a></li>
+      
+      
+      
+        <li class="dropdown">
+            <a href="#" class="user-menu user-menu-desktop dropdown-toggle" data-toggle="dropdown"><img src="http://ninja-media-script.com/content/uploads//avatars/default.jpg" class="img-circle" /><b class="caret"></b><div id="user-info"><h4>admin</h4><p>210 Points</p></div> </a>
+            <ul class="dropdown-menu">
+                              <li><a href="http://ninja-media-script.com/admin" class="admin_link_desktop"><i class="fa fa-coffee"></i> Admin</a></li>
+                            <li><a href="http://ninja-media-script.com/user/admin" class="user-profile-link-desktop"><i class="fa fa-user"></i> My Profile</a></li>
+              <li><a href="http://ninja-media-script.com/logout" id="user_logout_desktop"><i class="fa fa-power-off"></i> Logout</a></li>
+            </ul>
+          </li>
+
+          </ul>
+
+
+
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container -->
+</nav>
+
+
+	<h2 class="subheader">
+		<div class="container">
+			<i class="fa fa-coffee"></i> Admin Functionality</div></h2>
+		
+	
+
+
+<div id="main_container">
+
+    
+
+<div class="container admin">
+
+	<div class="col-md-3 col-lg-3 admin-left">
+
+		<div class="row version">
+	<div id="version_block" class="col-md-12">
+		<h4>Ninja Media Script</h4>
+		<h5>{version#}</h5>
+
+		<small>current version (<span class="current_version">1.1.9</span>)<br />
+		<a href="http://ninja-media-script.com/perform_upgrade">If you are not up-to-date, click here to update to the latest version</a>
+	</small></div><small>
+</small></div><small>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<a class="admin-block rounded-top-left rounded-top-right" data-section="media" style="background:#cb9800" href="http://ninja-media-script.com/admin/media">
+					<i class="fa fa-picture-o"></i><span>Media (114)</span>
+				</a>
+			</div>
+
+			<div class="col-md-12">
+				<a class="admin-block" data-section="comments" style="background:#98cb00" href="http://ninja-media-script.com/admin/comments">
+					<i class="fa fa-comments"></i><span>Comments (0)</span>
+				</a>
+			</div>
+
+			<div class="col-md-12">
+				<a class="admin-block  active" data-section="users" style="background:#0098cb" href="http://ninja-media-script.com/admin/users">
+					<i class="fa fa-user"></i><span>Users (1)</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<a class="admin-block " data-section="categories" style="background:#bb00c0" href="http://ninja-media-script.com/admin/categories">
+					<i class="fa fa-list"></i><span>Categories (14)</span>
+				</a>
+			</div>
+
+			<div class="col-md-12">
+				<a class="admin-block " data-section="pages" style="background:#D12362" href="http://ninja-media-script.com/admin/pages">
+					<i class="fa fa-file"></i><span>Pages (beta*)</span>
+				</a>
+			</div>
+
+			<div class="col-md-12">
+				<a class="admin-block " data-section="settings" style="background:#333344" href="http://ninja-media-script.com/admin/settings">
+					<i class="fa fa-cog"></i><span>Settings</span>
+				</a>
+			</div>
+
+			<div class="col-md-12">
+				<a class="admin-block " data-section="plugins" style="background:#1ABC9C" href="http://ninja-media-script.com/admin/plugins">
+					<i class="fa fa-puzzle-piece"></i><span>Plugins</span>
+				</a>
+			</div>
+
+			<div class="col-md-12">
+				<a class="admin-block " data-section="ad_placements" style="background:#BCBC9C" href="http://ninja-media-script.com/admin/ad_placements">
+					<i class="fa fa-newspaper-o"></i><span>Ad Placements</span>
+				</a>
+			</div>
+
+			<div class="col-md-12">
+				<a class="admin-block rounded-bottom-left rounded-bottom-right " data-section="custom_code" style="background:#C89966" href="http://ninja-media-script.com/admin/custom_code">
+					<i class="fa fa-code"></i><span>Custom Code</span>
+				</a>
+			</div>
+
+			
+		</div>
+		
+	</small></div><small>
+
+	<div id="admin_section" class="col-md-9"><div class="white_container">
+	
+	<h2 style="margin-bottom:20px;"><i class="fa fa-user fa-user-icon"></i><span> Users</span></h2>
+
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<tbody><tr class="table-header">
+				<th>Username</th>
+				<th>Number of Flags</th>
+				<th>Actions</th>
+								</tr><tr>
+					<td><a href="http://ninja-media-script.com/user/admin" target="_blank">
+						admin						</a>
+					</td>
+					<td>
+						0					</td>
+					<td>
+													<a href="http://ninja-media-script.com/admin/deactivate_user/1" class="btn btn-xs btn-danger disable-username-admin"><span class="fa fa-minus-circle"></span> Disable User</a>
+											</td>
+					
+				</tr>
+						</tbody></table>
+	</div>
+	
+</div></div>
+
+			<input type="hidden" id="sort_order" value="" />
+	
+</small></div><small>
+
+
+</small></div><small>
+
+<div id="footer">
+© 2014 Ninja Media Script</div>
+
+<script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/noty/jquery.noty.js"></script>
+<script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/noty/themes/default.js"></script>
+<script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/noty/layouts/top.js"></script>
+<script type="text/javascript" src="http://ninja-media-script.com/application/assets/js/nprogress.js"></script>
+
+<script type="text/javascript">
+  $('document').ready(function(){
+
+    NProgress.start();
+
+    
+    var slide_pos = 1;
+
+    $('#random-right').click(function(){
+      if(slide_pos &lt; 3){
+        $('#random-slider').css('left', parseInt($('#random-slider').css('left')) - parseInt($('.random-container').width()) -28 + 'px') ;
+        slide_pos += 1;
+      }
+    });
+
+    $('#random-left').click(function(){
+      if(slide_pos &gt; 1){
+        $('#random-slider').css('left', parseInt($('#random-slider').css('left')) + parseInt($('.random-container').width()) +28 + 'px') ;
+        slide_pos -= 1;
+      }
+    });
+
+
+  });
+
+
+  $(window).load(function () {
+    NProgress.done();
+  });
+
+  $(window).resize(function(){
+    jquery_sticky_footer();
+  });
+
+
+  $(window).bind("load", function() {    
+    jquery_sticky_footer();
+  });
+
+  function jquery_sticky_footer(){
+    var footer = $("#footer");
+    var pos = footer.position();
+    var height = $(window).height();
+    height = height - pos.top;
+    height = height - footer.outerHeight();
+    if (height &gt; 0) {
+      footer.css({'margin-top' : height+'px'});
+    }
+  }
+
+  /********** Mobile Functionality **********/
+
+  var mobileSafari = '';
+
+  $(document).ready(function(){
+    $('.mobile-menu-toggle').click(function(){
+      $('.mobile-menu').toggle();
+      $('body').toggleClass('mobile-margin').toggleClass('body-relative');
+      $('.navbar').toggleClass('mobile-margin');
+    });
+
+
+    // Assign a variable for the application being used
+    var nVer = navigator.appVersion;
+    // Assign a variable for the device being used
+    var nAgt = navigator.userAgent;
+    var nameOffset,verOffset,ix;
+   
+   
+    // First check to see if the platform is an iPhone or iPod
+    if(navigator.platform == 'iPhone' || navigator.platform == 'iPod'){
+      // In Safari, the true version is after "Safari" 
+      if ((verOffset=nAgt.indexOf('Safari'))!=-1) {
+        // Set a variable to use later
+        mobileSafari = 'Safari';
+      }
+    }
+   
+    // If is mobile Safari set window height +60
+    if (mobileSafari == 'Safari') { 
+      // Height + 60px
+      $('.mobile-menu').css('height', (parseInt($(window).height())+ 60) + 'px' );
+    } else {
+      // Else use the default window height
+      $('.mobile-menu').css('height', $(window).height()); 
+    };
+
+  });
+
+  $(window).resize(function(){
+    // If is mobile Safari set window height +60
+    if (mobileSafari == 'Safari') { 
+      // Height + 60px
+      $('.mobile-menu').css('height', (parseInt($(window).height())+ 60) + 'px' );
+    } else {
+      // Else use the default window height
+      $('.mobile-menu').css('height', $(window).height()); 
+    };
+  });
+
+  /********** End Mobile Functionality **********/
+
+
+</script>
+
+
+	<script type="text/javascript">
+
+		$('document').ready(function(){
+			$('a.admin-block').bind('click', function(e) {
+				$('a.admin-block.active').removeClass('active');
+				$(this).addClass('active');
+				//window.location.href = '/?section=comments';
+			  var url = $(this).attr('href');
+			  $('div#admin_section').load(url + $('#sort_order').val()); // load the html response into a DOM element
+			  e.preventDefault(); // stop the browser from following the link
+			});
+
+			$('a.admin-block.active').trigger('click');
+		});
+
+	</script>
+
+
+
+  <script>
+      </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+
+
+</small><tester id="tags_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594029_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594048_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594061_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594072_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594083_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594099_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594111_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594122_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594134_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594147_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594161_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594169_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594182_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><tester id="tags1416071594194_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester></body></html>

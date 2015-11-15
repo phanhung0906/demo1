@@ -1,0 +1,5 @@
+.idea/*
+content/uploads/*
+config.php
+install.php
+database.sql

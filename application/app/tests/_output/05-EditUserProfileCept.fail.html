@@ -1,0 +1,908 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" class="nprogress-busy"><head>
+              <title>Ninja Media Script - Viral Fun Media Sharing Script</title>
+    
+    <meta name="viewport" content="initial-scale=1" />
+    
+    <link rel="stylesheet" href="http://ninja-media-script.com/content/themes/default/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://ninja-media-script.com/content/themes/default/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="http://ninja-media-script.com/content/themes/default/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="http://ninja-media-script.com/content/themes/default/assets/css/style.css" />
+    
+	<style type="text/css">
+
+		
+		.btn.btn-color, input[type="submit"]{
+			background:#db3b3b !important;
+			color:#fff;
+			border-radius:0px;
+		}
+
+		h2 i{
+			color:#db3b3b;
+		}
+
+		.btn-color:hover{
+			color:#fff;
+		}
+
+		.btn.btn-radio {
+			background: #ef4f4f;
+			color:#fff;
+		}
+
+		.btn.btn-radio.active {
+			background:#db3b3b;
+			color:#fff;
+		}
+
+		#nprogress .bar {
+			background:#db3b3b;
+		}
+
+		#nprogress .spinner-icon {
+			border-top-color:#db3b3b;
+			border-left-color:#db3b3b;
+		}
+		#nprogress .peg {
+			box-shadow: 0 0 10px #db3b3b, 0 0 5px #db3b3b;
+		}
+
+		.nav .caret, .nav&gt;li&gt;a, .navbar .navbar-nav&gt;.active&gt;a, .nav a:hover .caret{
+			color:#db3b3b;
+			border-top-color:#db3b3b;
+			border-bottom-color:#db3b3b;
+		}
+
+		.navbar-nav&gt;li&gt;a.upload-btn, .navbar-inverse .navbar-nav&gt;li&gt;a:hover
+		{
+			background:#db3b3b;
+		}
+
+		.active .nav-border-bottom{
+			background:#db3b3b;
+		}
+
+		.form-control:focus{
+			border-color:#db3b3b;
+		}
+
+		a.spcl-button.color {
+			background-color:#db3b3b;
+		}
+
+		.dropdown-menu&gt;li&gt;a:hover, .dropdown-menu&gt;li&gt;a:focus{
+			background:#db3b3b;
+		}
+
+		ul.tags li a{
+			background:#db3b3b;
+		}
+
+		div.tagsinput span.tag{
+			border:1px solid #db3b3b;
+			color:#fff;
+			background:#ef4f4f;
+		}
+
+		.table-striped&gt;tbody&gt;tr:first-child&gt;th{
+			background:#db3b3b;
+			border:0px;
+			color:#fff;
+		}
+
+		.table-striped&gt;tbody&gt;tr:first-child{
+			border:0px;
+		}
+		.table-striped&gt;tbody&gt;tr:nth-child(2)&gt;td{
+			border-top-color:#ff6d6d;
+		}
+
+		.pagination&gt;li&gt;a{
+			background:#a90909;
+		}
+
+		.pagination&gt;li&gt;span, .pagination&gt;.active&gt;span, .pagination&gt;li&gt;a:hover, .pagination&gt;.active&gt;span:hover{
+			background:#ff6d6d;
+		}
+
+		.pagination&gt;li&gt;span:hover, .pagination&gt;.disabled&gt;span{
+			background:#ff9f9f;
+			color:#a90909;
+		}
+
+		.pagination&gt;li&gt;a, .pagination&gt;li&gt;span, .pagination&gt;.disabled&gt;span, .pagination&gt;.disabled&gt;a, .pagination&gt;.disabled&gt;a:hover, .pagination&gt;.disabled&gt;a:focus, .pagination&gt;.active&gt;a, .pagination&gt;.active&gt;span, .pagination&gt;.active&gt;a:hover, .pagination&gt;.active&gt;span:hover, .pagination&gt;.active&gt;a:focus, .pagination&gt;.active&gt;span:focus{
+			border:1px solid #db3b3b;
+		}
+
+		div.tagsinput span.tag a{
+			color:#a90909;
+		}
+
+		a.spcl-button.color:hover {
+			background-color:#ef4f4f;
+			color:#fff;
+		}
+
+		.btn.btn-prev:hover, .btn.btn-next:hover{
+			background:#db3b3b;
+		}
+
+
+
+		/********** SECONDARY COLOR **********/
+		.home-media-like.active{
+			background:#12c3ee;
+		}
+
+		p.home-like-count{
+			color:#12c3ee;
+		}
+
+		a, a:hover, a:focus{
+			color:#12c3ee;
+		}
+
+		.user-menu p {
+			color:#12c3ee;
+		}
+
+		#next_media li a div.active, #next_media li a:hover div{
+			border-color:#12c3ee;
+		}
+
+		.admin-block.active, .admin-block:hover{
+			border-color:#db3b3b;
+		}
+
+		h2.subheader{
+			border-color:#a90909;
+			background:#db3b3b;
+		}
+
+		.ouro:after {
+			background-color:#db3b3b;
+		}
+
+		.ouro {
+			background-color:#ff6d6d;
+		}
+
+		h2.subheader i{
+			color:#a90909;
+		}
+
+		.load-more-btn{
+			border-bottom-color:#a90909;
+		}
+	</style>
+
+
+    <link rel="icon" href="http://ninja-media-script.com/content/uploads//settings/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://ninja-media-script.com/content/uploads//settings/favicon.png" type="image/x-icon" />
+
+    <!--[if lte IE 8]>
+      <script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/jquery.fitvid.js"></script>
+    <script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/jquery.timeago.js"></script>
+
+    </head>
+<body style="padding-bottom: 30px;">
+
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo" href="http://ninja-media-script.com"><img src="http://ninja-media-script.com/content/uploads//settings/547b9ab4431d8-logo.png" style="height:35px; width:auto;" /></a>
+      
+        <div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
+
+          <!-- MOBILE NAV -->
+
+            <div class="mobile-menu" style="height: 622px;">
+
+              
+                                                <a href="http://ninja-media-script.com/user/johndoe1418488234" class="usr-avatar"><img src="http://ninja-media-script.com/content/uploads//avatars/default.jpg" alt="johndoe1418488234" class="img-circle user-avatar-large" /></a>
+                <a href="http://ninja-media-script.com/user/johndoe1418488234" class="username"><h2>johndoe1418488...</h2></a>
+                <p class="points"><i class="fa fa-star" style="color:gold"></i> 200 points</p>
+                <div id="avatar-bg"></div>
+
+              
+              <ul>
+                <li class=""><a href="http://ninja-media-script.com"><i class="fa fa-home"></i> Home</a></li>
+               <li class="dropdown ">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-star"></i> Popular <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://ninja-media-script.com/popular/week">for the Week</a></li>
+                  <li><a href="http://ninja-media-script.com/popular/month">for the Month</a></li>
+                  <li><a href="http://ninja-media-script.com/popular/year">for the Year</a></li>
+                  <li><a href="http://ninja-media-script.com/popular">All Time</a></li>
+                </ul>
+              </li>
+              
+              
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle categories" data-toggle="dropdown"><i class="fa fa-folder-open"></i> Categories <b class="caret"></b></a>
+                  
+                  <ul class="dropdown-menu">
+                      <li>
+                                                      <a href="http://ninja-media-script.com/category/animals">Animals</a>
+                                                      <a href="http://ninja-media-script.com/category/architecture">Architecture</a>
+                                                      <a href="http://ninja-media-script.com/category/cartoon">Cartoon</a>
+                                                      <a href="http://ninja-media-script.com/category/my new cat">My New Cat</a>
+                                                      <a href="http://ninja-media-script.com/category/comedy">Comedy</a>
+                                                      <a href="http://ninja-media-script.com/category/comics">Comics</a>
+                                                      <a href="http://ninja-media-script.com/category/family">Family</a>
+                                                      <a href="http://ninja-media-script.com/category/film">Film</a>
+                                                      <a href="http://ninja-media-script.com/category/food">Food</a>
+                                                      <a href="http://ninja-media-script.com/category/music">Music</a>
+                                                      <a href="http://ninja-media-script.com/category/news">News</a>
+                                                      <a href="http://ninja-media-script.com/category/retro">Retro</a>
+                                                      <a href="http://ninja-media-script.com/category/sports">Sports</a>
+                                                      <a href="http://ninja-media-script.com/category/uncategorized">Uncategorized</a>
+                                                      <a href="http://ninja-media-script.com/category/vehicles">Vehicles</a>
+                                                </li>
+                    </ul>
+             </li>
+
+                          <li class="dropdown ">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file-text"></i> More <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                                                        <li><a href="http://ninja-media-script.com/pages/new-page">New Page</a></li>
+                                  
+                </ul>
+              </li>
+              
+             <li><a href="http://ninja-media-script.com/random"><i class="fa fa-random"></i> Random</a></li>
+
+          </ul>
+
+          <!-- END MOBILE NAV -->
+
+
+
+        <ul class="nav navbar-nav navbar-right">
+        
+        
+          <li class="dropdown">
+              <a href="#" class="user-menu dropdown-toggle" data-toggle="dropdown"><b class="caret"></b><div id="user-info"><h4><i class="fa fa-gear"></i> Settings</h4></div> </a>
+              <ul class="dropdown-menu">
+                                <li><a href="http://ninja-media-script.com/user/johndoe1418488234"><i class="fa fa-user"></i> My Profile</a></li>
+                <li><a href="http://ninja-media-script.com/logout" id="user_logout_mobile"><i class="fa fa-power-off"></i> Logout</a></li>
+              </ul>
+            </li>
+
+                                  <li><a href="http://ninja-media-script.com/upload" class="upload-btn"><i class="fa fa-cloud-upload"></i> Upload</a></li>
+                      </ul>
+
+
+        </div>
+      </div>
+
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+      
+      <ul class="nav navbar-nav navbar-left nav-desktop">
+        <!--li><a href="#" id="categories_open"><i class="fa fa-th-list"></i> Categories</a></li-->
+        <li class=""><a href="http://ninja-media-script.com"><i class="fa fa-home"></i><span> Home</span></a><div class="nav-border-bottom"></div></li>
+         <li class="dropdown ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-star"></i><span> Popular </span><b class="caret"></b><div class="nav-border-bottom"></div></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://ninja-media-script.com/popular/week">for the Week</a></li>
+            <li><a href="http://ninja-media-script.com/popular/month">for the Month</a></li>
+            <li><a href="http://ninja-media-script.com/popular/year">for the Year</a></li>
+            <li><a href="http://ninja-media-script.com/popular">All Time</a></li>
+          </ul>
+        </li>
+        
+        
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle categories" data-toggle="dropdown"><i class="fa fa-folder-open"></i><span> Categories </span><b class="caret"></b><div class="nav-border-bottom"></div></a>
+            
+            <ul class="dropdown-menu">
+                <li>
+                                          <a href="http://ninja-media-script.com/category/animals">Animals</a>
+                                          <a href="http://ninja-media-script.com/category/architecture">Architecture</a>
+                                          <a href="http://ninja-media-script.com/category/cartoon">Cartoon</a>
+                                          <a href="http://ninja-media-script.com/category/my new cat">My New Cat</a>
+                                          <a href="http://ninja-media-script.com/category/comedy">Comedy</a>
+                                          <a href="http://ninja-media-script.com/category/comics">Comics</a>
+                                          <a href="http://ninja-media-script.com/category/family">Family</a>
+                                          <a href="http://ninja-media-script.com/category/film">Film</a>
+                                          <a href="http://ninja-media-script.com/category/food">Food</a>
+                                          <a href="http://ninja-media-script.com/category/music">Music</a>
+                                          <a href="http://ninja-media-script.com/category/news">News</a>
+                                          <a href="http://ninja-media-script.com/category/retro">Retro</a>
+                                          <a href="http://ninja-media-script.com/category/sports">Sports</a>
+                                          <a href="http://ninja-media-script.com/category/uncategorized">Uncategorized</a>
+                                          <a href="http://ninja-media-script.com/category/vehicles">Vehicles</a>
+                                    </li>
+              </ul>
+       </li>
+
+              <li class="dropdown ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file-text"></i> More <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+                                      <li><a href="http://ninja-media-script.com/pages/new-page">New Page</a></li>
+                      
+          </ul>
+        </li>
+        
+      </ul>  
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://ninja-media-script.com/random" class="random"><i class="fa fa-random"></i></a></li>
+              <li><a href="http://ninja-media-script.com/upload" class="upload-btn upload-btn-desktop"><i class="fa fa-cloud-upload"></i> Upload</a></li>
+      
+      
+      
+        <li class="dropdown">
+            <a href="#" class="user-menu user-menu-desktop dropdown-toggle" data-toggle="dropdown"><img src="http://ninja-media-script.com/content/uploads//avatars/default.jpg" class="img-circle" /><b class="caret"></b><div id="user-info"><h4>johndoe1...</h4><p>200 Points</p></div> </a>
+            <ul class="dropdown-menu">
+                            <li><a href="http://ninja-media-script.com/user/johndoe1418488234" class="user-profile-link-desktop"><i class="fa fa-user"></i> My Profile</a></li>
+              <li><a href="http://ninja-media-script.com/logout" id="user_logout_desktop"><i class="fa fa-power-off"></i> Logout</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+
+
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container -->
+</nav>
+
+
+<style type="text/css">
+
+	.navbar.gallery-sub-header{
+		display:none;
+	}
+
+	.item-large{
+		width:100%;
+		margin:0px auto;
+	}
+
+	div.pagination{
+		padding-left:90px;
+		padding-right:80px;
+	}
+
+</style>
+
+
+	<style type="text/css">
+		div.pagination{
+			visibility:hidden;
+		}
+	</style>
+
+		<div class="col-md-12 col-lg-12" id="profile-mobile">
+	<div class="profile-container">
+		
+							
+		<a href="http://ninja-media-script.com/user/johndoe1418488234"><img src="http://ninja-media-script.com/content/uploads//avatars/default.jpg" alt="johndoe1418488234" class="img-circle user-avatar-large" /></a>
+		<h2>johndoe1418488234  <i class="fa fa-edit" data-toggle="modal" data-target="#edit-modal" style="cursor:pointer;"></i></h2>
+		<p><i class="fa fa-star" style="color:gold"></i> <a href="http://ninja-media-script.com/user/johndoe1418488234/points" "="">200 points</a> <i class="fa fa-question-circle points-question" style="cursor:pointer" data-toggle="modal" data-target="#aboutpoints"></i></p>
+		<p>Member since: December 13, 2014</p>
+		
+		<div class="user-btn-group">
+			<div class="btn-group vid-pic" data-toggle="buttons" style="margin-bottom:5px;">
+			  <label class="btn btn-default active user_profile_view" data-href="http://ninja-media-script.com/user/johndoe1418488234" style="line-height:20px;">
+			    <input type="radio" name="user_profile" id="uploads" /> <i class="fa icon-cloud-upload" style="font-size:14px; margin-right:4px;"></i> My Uploads			  </label>
+			  <label class="btn btn-default  user_profile_view" data-href="http://ninja-media-script.com/user/johndoe1418488234/likes" style="line-height:20px;">
+			    <input type="radio" name="user_profile" id="likes" /> <i class="fa fa-thumbs-o-up" style="font-size:14px; margin-right:4px;"></i> My Likes			  </label>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<div style="clear:both"></div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$('.user_profile_view').click(function(){
+			window.location = $(this).data('href');
+		});
+
+		$('points-question').tooltip('show')
+
+	});
+</script>
+<div class="container main_home_container">
+
+
+	<div class="col-md-12">
+
+		
+			<div id="media" class="col-md-8 col-lg-8" style="display: block; clear: both; margin: 0px auto; padding: 0px 0px 70px; position: relative; height: 165px;">
+
+									<h2 style="padding: 10px 0px; position: absolute; left: 0px; top: 0px;"><i class="fa-meh-o fa"></i> No uploads yet...</h2>
+				
+					
+				
+				<div style="clear: both; position: absolute; left: 182px; top: 0px;"></div>
+				<div class="pagination-outter pull-right;" style="position: absolute; left: 0px; top: 95px;">
+				</div>	
+
+			</div><!-- #media -->
+
+		
+
+	<div class="col-md-4 col-lg-4" id="sidebar_container">
+	<div id="sidebar_inner-sticky-wrapper" class="sticky-wrapper" style="height: 421px;"><div id="sidebar_inner" class="profile-container">
+		
+							
+		<a href="http://ninja-media-script.com/user/johndoe1418488234"><img src="http://ninja-media-script.com/content/uploads//avatars/default.jpg" alt="johndoe1418488234" class="img-circle user-avatar-large" /></a>
+		<h2>johndoe1418488234  <i class="fa fa-edit edit-user-profile" data-toggle="modal" data-target="#edit-modal" style="cursor:pointer;"></i></h2>
+		<p><i class="fa fa-star" style="color:gold"></i> <a href="http://ninja-media-script.com/user/johndoe1418488234/points" "="">200 Points</a> <i class="fa fa-question-circle points-question" style="cursor:pointer" data-toggle="modal" data-target="#aboutpoints"></i></p>
+		<p>Member since: December 13, 2014</p>
+		
+		
+		<div style="width:280px; margin:15px; font-size:11px; margin-bottom:0px">
+			<div class="btn-group vid-pic" data-toggle="buttons" style="margin-bottom:5px;">
+			  <label class="btn btn-default active user_profile_view" data-href="http://ninja-media-script.com/user/johndoe1418488234" style="line-height:20px;">
+			    <input type="radio" name="user_profile" id="uploads" /> <i class="fa icon-cloud-upload" style="font-size:14px; margin-right:4px;"></i> My Uploads			  </label>
+			  <label class="btn btn-default  user_profile_view" data-href="http://ninja-media-script.com/user/johndoe1418488234/likes" style="line-height:20px;">
+			    <input type="radio" name="user_profile" id="likes" /> <i class="fa fa-thumbs-o-up" style="font-size:14px; margin-right:4px;"></i> My Likes			  </label>
+			</div>
+		</div>
+
+	</div></div>
+</div>
+
+
+
+<div style="clear:both"></div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#sidebar_inner").sticky({topSpacing:50});
+
+		$('.user_profile_view').click(function(){
+			window.location = $(this).data('href');
+		});
+
+		$('points-question').tooltip('show')
+
+	});
+</script>
+
+</div>
+
+	</div>
+
+
+
+
+	<!-- Edit User Profile -->
+
+	<div class="modal fade" id="edit-modal" data-id="edit-user-profile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	        <h4 class="modal-title" id="myModalLabel">Edit Your Profile</h4>
+	      </div>
+	      <div class="modal-body">
+	      
+	      	<form method="POST" action="http://ninja-media-script.com/user/update/17" id="update-profile-form" accept-charset="UTF-8" enctype="multipart/form-data">
+			<ul>
+				<li>
+					<label for="username">Username:</label>					
+					<input name="username" type="text" id="username" class="form-control" value="johndoe1418488234" />
+				</li>
+				<li>
+					<label for="email">Email Address:</label>					
+					<input name="email" type="text" id="email" class="form-control" value="johndoe1418488234@gmail.com" />
+				</li>
+				<li>
+					<label for="image" style="margin-left:24px; margin-top:10px;">Update your avatar?</label>
+		            <img src="http://ninja-media-script.com/content/uploads//avatars/default.jpg" alt="johndoe1418488234" class="img-circle user-avatar-medium pull-left" style="width:75px" />
+		            <input name="avatar" style="line-height:15px; margin-left:100px;" type="file" />		            <div style="clear:both"></div>
+		        </li>
+		        <li>
+					<lable for="password">Password (leave blank to keep the original password):
+					<input type="password" name="password" id="password" class="form-control" />
+
+
+			<input type="hidden" id="id" name="id" value="17" />
+			<input type="hidden" id="redirect" name="redirect" value="http://ninja-media-script.com/user/johndoe1418488234" />
+
+	      </lable></li></ul></form></div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	        <input type="submit" class="btn btn-color submit-update-profile" value="Update Profile" />
+	      </div>
+	      
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+<!-- End Edit User Profile -->
+
+<!-- Edit User Profile -->
+
+	<div class="modal fade" id="aboutpoints" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-question-circle"></i> How to Earn Points</h4>
+	      </div>
+	      <div class="modal-body">
+	      
+	      	<p>Here is how you earn points</p>
+	      	<ul>
+	      		<li>Every day you login you will receive 1 point</li>
+	      		<li>Every upload you submit you will receive 1 point (max 5 per day)</li>
+	      		<li>Every time you leave a comment you will receive 1 point (max 5 per day)</li>
+	      	</ul>
+
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+<!-- End Edit User Profile -->
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$('.hover_tooltip').tooltip({ placement: 'bottom' });
+
+		$('.flag-user').click(function(){
+				this_object = $(this);
+				$.post("http://ninja-media-script.com/user/add_flag", { user_id: $(this).data('id') }, function(data){
+					
+					$.getJSON("http://ninja-media-script.com/api/commentflags/" + String($(this_object).data('id')), function(data){
+						flagged_user = "You have flagged this user.";
+						flag_user = "Flag This User?";
+						if($(this_object).find('.flag-message').text() == flagged_user)
+						{	
+							$(this_object).find('.flag-message').text(flag_user);
+						} else {
+							$(this_object).find('.flag-message').text(flagged_user);
+						}
+					});
+				});
+			});
+	});
+
+</script>
+
+<script type="text/javascript">
+
+	
+
+	$('document').ready(function(){
+
+		$(".timeago").timeago();
+
+		$.each($('.item'), function(index, value){
+			item_click_events($(value));
+		});
+
+	});
+
+
+	
+		$(document).ready(function(){
+
+			var $container = $('#media');
+			var no_more_media = "No More Media to Load.";
+			var loading_more_media = "Loading More Media";
+
+			$container.imagesLoaded(function(){
+				$container.masonry();
+			});
+
+			$container.infinitescroll({
+
+				loading: {
+			        finished: undefined,
+			        finishedMsg: "&lt;p&gt;" + no_more_media + "&lt;/p&gt;",
+			        img: "data:image/gif;base64,R0lGODlhAQABAHAAACH5BAUAAAAALAAAAAABAAEAAAICRAEAOw==",
+			        msg: null,
+			        msgText: "&lt;div class='loading'&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;&lt;p&gt;" + loading_more_media + "&lt;/p&gt;",
+			        selector: null,
+			        speed: 'fast',
+			        start: undefined,
+			    },
+	 
+			    navSelector  : "ul.pagination",            
+			                   // selector for the paged navigation (it will be hidden)
+			    nextSelector : "ul.pagination a:first",    
+			                   // selector for the NEXT link (to page 2)
+			    itemSelector : ".container #media .item",
+
+			    animate:false,
+
+			    bufferPx: 3000,
+			    extraScrollPx: 15000,
+			  },
+
+			  function( newElements ) {
+			  	 // hide new items while they are loading
+	    		//var $newElems = $( newElements ).css({ opacity: 0 });
+
+	    		$.each($(newElements), function(index, value){
+	    			item_click_events($(value));
+	    		});
+
+			  	$("#media").imagesLoaded(function(){
+				   var $newElems = $( newElements );
+				   $newElems.animate({ opacity: 1 });
+
+				   $container.masonry( 'appended', $newElems, true);
+
+
+				});
+			  });
+
+		});
+
+	
+	function toggle_gif(img, icon){
+		if($(img).data('state') == 0){
+			play_gif(img, icon);
+		} else {
+			stop_gif(img, icon);
+		}
+	}
+
+	function play_gif(img, icon){
+		$(img).attr('src', $(img).data('animation'));
+		$(img).data('state', 1);
+		$(icon).fadeOut();
+	}
+
+	function stop_gif(img, icon){
+		$(img).attr('src', $(img).data('original'));
+		$(img).data('state', 0);
+		$(icon).fadeIn();
+	}
+
+	function item_click_events(item){
+
+		$(item).find('.video_container').fitVids();
+
+		item_gif_vine_events(item);
+		
+		media_like = $(item).find('.home-media-like');
+
+		$(media_like).click(function(){
+			if($(this).data('authenticated') == false){
+				window.location = 'http://ninja-media-script.com/signup';
+			}
+			this_object = $(this);
+			$(this).children('i').removeClass('animated').removeClass('rotateIn');
+			$(this_object).toggleClass('active');
+			var like_count = $(this_object).parent().find('.home-like-count span');
+			if($(this_object).hasClass('active')){
+				$(this_object).children('i').addClass('animated').addClass('bounceIn');
+				like_count.text( parseInt(like_count.text()) + 1 );
+			} else {
+				like_count.text( parseInt(like_count.text()) - 1 );
+			}
+			$.post("http://ninja-media-script.com/media/add_like", { media_id: $(this).data('id') }, function(data){
+				
+			});
+		});
+	
+	}
+
+	function item_gif_vine_events(object){
+
+		var gifs = $(object).find('.animated-gif .animation');
+		var gif_play = $(object).find('.gif-play');
+
+		gif_click(gifs);
+		gif_click(gif_play);
+
+
+		var vine = $(object).find('.vine-thumbnail');
+		var vine_play = $(object).find('.vine-thumbnail-play');
+
+		vine_click(vine);
+		vine_click(vine_play);
+		
+	}
+
+	function gif_click(object){
+		$(object).click(function(){
+			animated_gif = $(this).parent('.animated-gif').find('.animation');
+			play_icon = $(this).parent('.animated-gif').find('.gif-play');
+			toggle_gif(animated_gif, play_icon);
+		});
+	}
+
+	function vine_click(object){
+		$(object).click(function(){
+			var embed = $(this).data('embed');
+			$(this).parent('.video_container').html('&lt;iframe class="vine-embed" src="' + embed + '" width="100%" height="600" frameborder="0"&gt;&lt;/iframe&gt;');
+		});
+	}
+
+
+</script>
+<div id="footer">
+© 2014 Ninja Media Script</div>
+
+<script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/noty/jquery.noty.js"></script>
+<script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/noty/themes/default.js"></script>
+<script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/noty/layouts/top.js"></script>
+<script type="text/javascript" src="http://ninja-media-script.com/content/themes/default/assets/js/nprogress.js"></script>
+
+<script type="text/javascript">
+  $('document').ready(function(){
+
+  	$('.dropdown').hover(function(){
+        $(this).addClass('open');
+    }, function(){
+        $(this).removeClass('open');
+    });
+
+    NProgress.start();
+
+            var n = noty({text: 'Sorry, this username is already in use. Please try another name.', layout: 'top', type: 'error', template: '&lt;div class="noty_message"&gt;&lt;span class="noty_text"&gt;&lt;/span&gt;&lt;div class="noty_close"&gt;&lt;/div&gt;&lt;/div&gt;', closeWith: ['button'], timeout:20000 });
+            
+    var slide_pos = 1;
+
+    $('#random-right').click(function(){
+      if(slide_pos &lt; 3){
+        $('#random-slider').css('left', parseInt($('#random-slider').css('left')) - parseInt($('.random-container').width()) -28 + 'px') ;
+        slide_pos += 1;
+      }
+    });
+
+    $('#random-left').click(function(){
+      if(slide_pos &gt; 1){
+        $('#random-slider').css('left', parseInt($('#random-slider').css('left')) + parseInt($('.random-container').width()) +28 + 'px') ;
+        slide_pos -= 1;
+      }
+    });
+
+
+  });
+
+
+  $(window).load(function () {
+    NProgress.done();
+  });
+
+  $(window).resize(function(){
+    jquery_sticky_footer();
+  });
+
+
+  $(window).bind("load", function() {    
+    jquery_sticky_footer();
+  });
+
+  function jquery_sticky_footer(){
+    var footer = $("#footer");
+    var pos = footer.position();
+    var height = $(window).height();
+    height = height - pos.top;
+    height = height - footer.outerHeight();
+    if (height &gt; 0) {
+      footer.css({'margin-top' : height+'px'});
+    }
+  }
+
+  /********** Mobile Functionality **********/
+
+  var mobileSafari = '';
+
+  $(document).ready(function(){
+    $('.mobile-menu-toggle').click(function(){
+      $('.mobile-menu').toggle();
+      $('body').toggleClass('mobile-margin').toggleClass('body-relative');
+      $('.navbar').toggleClass('mobile-margin');
+    });
+
+
+    // Assign a variable for the application being used
+    var nVer = navigator.appVersion;
+    // Assign a variable for the device being used
+    var nAgt = navigator.userAgent;
+    var nameOffset,verOffset,ix;
+   
+   
+    // First check to see if the platform is an iPhone or iPod
+    if(navigator.platform == 'iPhone' || navigator.platform == 'iPod'){
+      // In Safari, the true version is after "Safari" 
+      if ((verOffset=nAgt.indexOf('Safari'))!=-1) {
+        // Set a variable to use later
+        mobileSafari = 'Safari';
+      }
+    }
+   
+    // If is mobile Safari set window height +60
+    if (mobileSafari == 'Safari') { 
+      // Height + 60px
+      $('.mobile-menu').css('height', (parseInt($(window).height())+ 60) + 'px' );
+    } else {
+      // Else use the default window height
+      $('.mobile-menu').css('height', $(window).height()); 
+    };
+
+  });
+
+  $(window).resize(function(){
+    // If is mobile Safari set window height +60
+    if (mobileSafari == 'Safari') { 
+      // Height + 60px
+      $('.mobile-menu').css('height', (parseInt($(window).height())+ 60) + 'px' );
+    } else {
+      // Else use the default window height
+      $('.mobile-menu').css('height', $(window).height()); 
+    };
+  });
+
+  /********** End Mobile Functionality **********/
+
+
+</script>
+
+
+  <script>
+      </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+<link rel="stylesheet" type="text/css" href="http://ninja-media-script.com/_debugbar/assets/stylesheets?1415810573" />
+<script type="text/javascript" src="http://ninja-media-script.com/_debugbar/assets/javascript?1415737943"></script>
+<script type="text/javascript">
+var phpdebugbar = new PhpDebugBar.DebugBar();
+phpdebugbar.addTab("queries", new PhpDebugBar.DebugBar.Tab({"icon":"inbox","title":"Queries", "widget": new PhpDebugBar.Widgets.SQLQueriesWidget()}));
+phpdebugbar.setDataMap({
+"queries": ["queries", []],
+"queries:badge": ["queries.nb_statements", 0]
+});
+phpdebugbar.restoreState();
+phpdebugbar.ajaxHandler = new PhpDebugBar.AjaxHandler(phpdebugbar);
+phpdebugbar.setOpenHandler(new PhpDebugBar.OpenHandler({"url":"http:\/\/ninja-media-script.com\/_debugbar\/open"}));
+phpdebugbar.addDataSet({"__meta":{"id":"a3d4b3165d0c1e54781ec1002ac86566","datetime":"2014-12-13 16:30:58","utime":1418488258.63,"method":"POST","uri":"\/user\/update\/17","ip":"127.0.0.1"},"queries":{"nb_statements":7,"nb_failed_statements":0,"accumulated_duration":0.0036,"accumulated_duration_str":"3.6ms","statements":[{"sql":"select * from `settings` limit 1","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.00078,"duration_str":"780\u03bcs","stmt_id":null},{"sql":"select * from `settings` limit 1","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.00045,"duration_str":"450\u03bcs","stmt_id":null},{"sql":"select * from `plugins` where `active` = ?","params":{"0":"1","hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table"},"duration":0.00026,"duration_str":"260\u03bcs","stmt_id":null},{"sql":"select * from `users` where `id` = ? limit 1","params":{"0":"17","hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.00053,"duration_str":"530\u03bcs","stmt_id":null},{"sql":"select * from `users` where `id` = ? limit 1","params":{"0":"17","hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.00047,"duration_str":"470\u03bcs","stmt_id":null},{"sql":"select * from `settings` limit 1","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.00063,"duration_str":"630\u03bcs","stmt_id":null},{"sql":"select * from `users` where `username` = ? limit 1","params":{"0":"bobsburgers","hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.00048,"duration_str":"480\u03bcs","stmt_id":null}]}}, "a3d4b3165d0c1e54781ec1002ac86566", "(stacked)");
+phpdebugbar.addDataSet({"__meta":{"id":"69317330c89faa952b31fa1e2452aee7","datetime":"2014-12-13 16:30:58","utime":1418488258.8,"method":"GET","uri":"\/user\/johndoe1418488234","ip":"127.0.0.1"},"queries":{"nb_statements":18,"nb_failed_statements":0,"accumulated_duration":0.00726,"accumulated_duration_str":"7.26ms","statements":[{"sql":"select * from `settings` limit 1","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.0006,"duration_str":"600\u03bcs","stmt_id":null},{"sql":"select * from `settings` limit 1","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.00052,"duration_str":"520\u03bcs","stmt_id":null},{"sql":"select * from `plugins` where `active` = ?","params":{"0":"1","hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table"},"duration":0.00048,"duration_str":"480\u03bcs","stmt_id":null},{"sql":"select * from `users` where `username` = ? limit 1","params":{"0":"johndoe1418488234","hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.0004,"duration_str":"400\u03bcs","stmt_id":null},{"sql":"select count(*) as aggregate from `media` where `user_id` = ?","params":{"0":"17"},"duration":0.00041,"duration_str":"410\u03bcs","stmt_id":null},{"sql":"select * from `media` where `user_id` = ? order by `created_at` desc limit 15 offset 0","params":{"0":"17","hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table"},"duration":0.00045,"duration_str":"450\u03bcs","stmt_id":null},{"sql":"select * from `users` where `id` = ? limit 1","params":{"0":"17","hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.0004,"duration_str":"400\u03bcs","stmt_id":null},{"sql":"select sum(`points`) as aggregate from `points` where `user_id` = ?","params":{"0":"17"},"duration":0.00031,"duration_str":"310\u03bcs","stmt_id":null},{"sql":"select * from `settings` limit 1","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.00056,"duration_str":"560\u03bcs","stmt_id":null},{"sql":"select * from `settings` limit 1","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended&lt;br \/&gt;&lt;code&gt;LIMIT&lt;\/code&gt; without &lt;code&gt;ORDER BY&lt;\/code&gt; causes non-deterministic results, depending on the query execution plan"},"duration":0.00059,"duration_str":"590\u03bcs","stmt_id":null},{"sql":"select sum(`points`) as aggregate from `points` where `user_id` = ?","params":{"0":"17"},"duration":0.00037,"duration_str":"370\u03bcs","stmt_id":null},{"sql":"select * from `categories` order by `order` asc","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended"},"duration":0.00047,"duration_str":"470\u03bcs","stmt_id":null},{"sql":"select * from `pages`","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended"},"duration":0.00028,"duration_str":"280\u03bcs","stmt_id":null},{"sql":"select sum(`points`) as aggregate from `points` where `user_id` = ?","params":{"0":"17"},"duration":0.00028,"duration_str":"280\u03bcs","stmt_id":null},{"sql":"select * from `categories` order by `order` asc","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended"},"duration":0.00042,"duration_str":"420\u03bcs","stmt_id":null},{"sql":"select * from `pages`","params":{"hints":"Use &lt;code&gt;SELECT *&lt;\/code&gt; only if you need all columns from table&lt;br \/&gt;The &lt;code&gt;SELECT&lt;\/code&gt; statement has no &lt;code&gt;WHERE&lt;\/code&gt; clause and could examine many more rows than intended"},"duration":0.00023,"duration_str":"230\u03bcs","stmt_id":null},{"sql":"select sum(`points`) as aggregate from `points` where `user_id` = ?","params":{"0":"17"},"duration":0.00023,"duration_str":"230\u03bcs","stmt_id":null},{"sql":"select sum(`points`) as aggregate from `points` where `user_id` = ?","params":{"0":"17"},"duration":0.00026,"duration_str":"260\u03bcs","stmt_id":null}]}}, "69317330c89faa952b31fa1e2452aee7");
+
+</script><div class="phpdebugbar phpdebugbar-minimized"><div class="phpdebugbar-resize-handle"></div><div class="phpdebugbar-header"><div class="phpdebugbar-header-left"><a href="javascript:" class="phpdebugbar-tab"><i class="fa fa-inbox"></i><span class="phpdebugbar-text">Queries</span><span class="phpdebugbar-badge" style="display: inline;">18</span></a></div><div class="phpdebugbar-header-right"><a href="javascript:" class="phpdebugbar-close-btn"></a><a href="javascript:" class="phpdebugbar-open-btn" style="display: block;"></a><select class="phpdebugbar-datasets-switcher" style="display: inline-block;"><option value="a3d4b3165d0c1e54781ec1002ac86566">#1 17 (stacked) (16:30:58)</option><option value="69317330c89faa952b31fa1e2452aee7">#2 johndoe1418488234 (16:30:58)</option></select></div></div><div class="phpdebugbar-body" style="height: 300px;"><div class="phpdebugbar-panel"><div class="phpdebugbar-widgets-sqlqueries"><div class="phpdebugbar-widgets-status"><span>18 statements were executed, 4 of which were duplicated</span><span title="Accumulated duration" class="phpdebugbar-widgets-duration">7.26ms</span></div><ul class="phpdebugbar-widgets-list"><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-1" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `settings` limit 1</code><span title="Duration" class="phpdebugbar-widgets-duration">600μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br />The <code>SELECT</code> statement has no <code>WHERE</code> clause and could examine many more rows than intended<br /><code>LIMIT</code> without <code>ORDER BY</code> causes non-deterministic results, depending on the query execution plan</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-1" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `settings` limit 1</code><span title="Duration" class="phpdebugbar-widgets-duration">520μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br />The <code>SELECT</code> statement has no <code>WHERE</code> clause and could examine many more rows than intended<br /><code>LIMIT</code> without <code>ORDER BY</code> causes non-deterministic results, depending on the query execution plan</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `plugins` where `active` = ?</code><span title="Duration" class="phpdebugbar-widgets-duration">480μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">1</td></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `users` where `username` = ? limit 1</code><span title="Duration" class="phpdebugbar-widgets-duration">400μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">johndoe1418488234</td></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br /><code>LIMIT</code> without <code>ORDER BY</code> causes non-deterministic results, depending on the query execution plan</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select count(*) as aggregate from `media` where `user_id` = ?</code><span title="Duration" class="phpdebugbar-widgets-duration">410μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">17</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `media` where `user_id` = ? order by `created_at` desc limit 15 offset 0</code><span title="Duration" class="phpdebugbar-widgets-duration">450μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">17</td></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `users` where `id` = ? limit 1</code><span title="Duration" class="phpdebugbar-widgets-duration">400μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">17</td></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br /><code>LIMIT</code> without <code>ORDER BY</code> causes non-deterministic results, depending on the query execution plan</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-2" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select sum(`points`) as aggregate from `points` where `user_id` = ?</code><span title="Duration" class="phpdebugbar-widgets-duration">310μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">17</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-1" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `settings` limit 1</code><span title="Duration" class="phpdebugbar-widgets-duration">560μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br />The <code>SELECT</code> statement has no <code>WHERE</code> clause and could examine many more rows than intended<br /><code>LIMIT</code> without <code>ORDER BY</code> causes non-deterministic results, depending on the query execution plan</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-1" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `settings` limit 1</code><span title="Duration" class="phpdebugbar-widgets-duration">590μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br />The <code>SELECT</code> statement has no <code>WHERE</code> clause and could examine many more rows than intended<br /><code>LIMIT</code> without <code>ORDER BY</code> causes non-deterministic results, depending on the query execution plan</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-2" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select sum(`points`) as aggregate from `points` where `user_id` = ?</code><span title="Duration" class="phpdebugbar-widgets-duration">370μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">17</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-3" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `categories` order by `order` asc</code><span title="Duration" class="phpdebugbar-widgets-duration">470μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br />The <code>SELECT</code> statement has no <code>WHERE</code> clause and could examine many more rows than intended</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-4" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `pages`</code><span title="Duration" class="phpdebugbar-widgets-duration">280μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br />The <code>SELECT</code> statement has no <code>WHERE</code> clause and could examine many more rows than intended</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-2" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select sum(`points`) as aggregate from `points` where `user_id` = ?</code><span title="Duration" class="phpdebugbar-widgets-duration">280μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">17</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-3" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `categories` order by `order` asc</code><span title="Duration" class="phpdebugbar-widgets-duration">420μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br />The <code>SELECT</code> statement has no <code>WHERE</code> clause and could examine many more rows than intended</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-4" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select * from `pages`</code><span title="Duration" class="phpdebugbar-widgets-duration">230μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">hints</td><td class="phpdebugbar-widgets-value">Use <code>SELECT *</code> only if you need all columns from table<br />The <code>SELECT</code> statement has no <code>WHERE</code> clause and could examine many more rows than intended</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-2" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select sum(`points`) as aggregate from `points` where `user_id` = ?</code><span title="Duration" class="phpdebugbar-widgets-duration">230μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">17</td></tr></tbody></table></li><li class="phpdebugbar-widgets-list-item phpdebugbar-widgets-sql-duplicate phpdebugbar-widgets-sql-duplicate-2" style="cursor: pointer;"><code class="phpdebugbar-widgets-sql">select sum(`points`) as aggregate from `points` where `user_id` = ?</code><span title="Duration" class="phpdebugbar-widgets-duration">260μs</span><table class="phpdebugbar-widgets-params"><tbody><tr><th colspan="2">Params</th></tr><tr><td class="phpdebugbar-widgets-name">0</td><td class="phpdebugbar-widgets-value">17</td></tr></tbody></table></li></ul></div></div></div><a href="javascript:" class="phpdebugbar-restore-btn" style="display: none;"></a></div><div class="phpdebugbar-openhandler" style="display: none;"><div class="phpdebugbar-openhandler-header">PHP DebugBar | Open<a href="javascript:"><i class="fa fa-times"></i></a></div><table><thead><tr><th width="150">Date</th><th width="55">Method</th><th>URL</th><th width="125">IP</th><th width="100">Filter data</th></tr></thead><tbody></tbody></table><div class="phpdebugbar-openhandler-actions"><a href="javascript:">Load more</a><a href="javascript:">Show only current URL</a><a href="javascript:">Show all</a><a href="javascript:">Delete all</a><form><br /><b>Filter results</b><br />Method: <select name="method"><option></option><option>GET</option><option>POST</option><option>PUT</option><option>DELETE</option></select><br />Uri: <input type="text" name="uri" /><br />IP: <input type="text" name="ip" /><br /><button type="submit">Search</button></form></div></div><div class="phpdebugbar-openhandler-overlay" style="display: none;"></div>
+
+<div id="nprogress" style="transition: all 200ms linear; -webkit-transition: all 200ms linear; opacity: 0;"><div class="bar" role="bar" style="transition: all 200ms ease; -webkit-transition: all 200ms ease; transform: translate3d(0%, 0px, 0px);"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div></div><ul id="noty_top_layout_container" class="i-am-new" style="top: 0px; left: 5%; position: fixed; width: 90%; height: auto; margin: 0px; padding: 0px; list-style-type: none; z-index: 9999999;"><li style="overflow: hidden; border-radius: 0px; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); border-left-width: 2px; border-left-style: solid; border-left-color: rgb(238, 238, 238); border-right-width: 2px; border-right-style: solid; border-right-color: rgb(238, 238, 238); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px; color: rgb(255, 255, 255); background: 0% 0% scroll rgb(192, 57, 43);"><div class="noty_bar noty_type_error" id="noty_1222776596948216600"><div class="noty_message" style="font-size: 13px; line-height: 16px; text-align: center; padding: 12px; width: auto; position: relative; font-weight: bold;"><span class="noty_text">Sorry, this username is already in use. Please try another name.</span><div class="noty_close" style="position: absolute; top: 4px; right: 4px; width: 10px; height: 10px; display: block; cursor: pointer; background: url(data:image/png;base64,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);"></div></div></div></li></ul></body></html>
