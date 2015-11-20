@@ -1,4 +1,5 @@
 <?php
+require_once('Uploader.php');
 
 class ImageHandler {
 
@@ -19,29 +20,31 @@ class ImageHandler {
 			$month_year = '';
 		}
 
-		$upload_folder = 'content/uploads/' . $folder . '/'.$month_year;
+		$upload_folder = Constant::FOLDER_CLOUDINARY . '/' . $month_year;
 
 		if ( @getimagesize($image) ){
 
-			// if the folder doesn't exist then create it.
-			if (!file_exists($upload_folder)) {
-				mkdir($upload_folder, 0777, true);
-			}
-
 			if($type =='upload'){
-
 				$filename =  str_replace(" ", "-", $image->getClientOriginalName());
 
 				// if the file exists give it a unique name
-				while (file_exists($upload_folder.$filename)) {
-					$filename =  uniqid() . '-' . $filename;
-				}
+                $arrayAllMedia = Media::all();
 
-				$uploadSuccess = $image->move($upload_folder, $filename);
+                foreach ($arrayAllMedia as $media)
+                {
+                    if($month_year.$filename == $media->pic_url){
+                        $filename =  uniqid() . '-' . $filename;
+                    }
+                }
+
+				// Store in cloudinary
+				\Cloudinary\Uploader::upload($_FILES['pic_url']['tmp_name'], array("public_id" => $upload_folder.'/'.$filename));
+//				$uploadSuccess = $image->move($upload_folder, $filename);
 
 				if(strpos($filename, '.gif') > 0){
 					$new_filename = str_replace('.gif', '-animation.gif', $filename);
-					copy($upload_folder . $filename, $upload_folder . $new_filename);
+//					copy($upload_folder . $filename, $upload_folder . $new_filename);
+                    \Cloudinary\Uploader::upload($_FILES['pic_url']['tmp_name'], array("public_id" => $upload_folder.'/'.$new_filename));
 				}
 
 			} else if($type = 'url'){

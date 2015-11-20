@@ -9,4 +9,5 @@
 class Constant {
 
     const NUMBER_MEDIA_NEXT = 21;
+    const FOLDER_CLOUDINARY = 'huncee/images';
 }

@@ -1,5 +1,7 @@
+!.gitignore
 .idea/*
-content/uploads/*
-config.php
-install.php
-database.sql
+/content/uploads/*
+/config.php
+/install.php
+/database.sql
+/backup
