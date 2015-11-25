@@ -1,4 +1,5 @@
 <?php
+require_once(dirname(__DIR__) . '/libraries/Uploader.php');
 
 class MediaController extends BaseController {
 
@@ -69,41 +70,12 @@ class MediaController extends BaseController {
 
 					if(isset($input['img_url']) && $input['img_url'] != ''){
 						$input['pic_url'] = ImageHandler::uploadImage($input['img_url'], 'images', Helper::slugify($input['title']), 'url');
-						//unset($input['pic_url_multi']);
 					} else if(isset($input['pic_url'])){
 						$input['pic_url'] = ImageHandler::uploadImage(Input::file('pic_url'), 'images');
-						
 						$input['pic'] = 1;
 					}
-
-					// Comment upload multi file
-					/*if(isset($input['pic_url_multi'])){
-						$input['pic_url_multi'] = '';
-						$listDeleteImg = $input['delete_img'];
-						
-						$multi_pics = array_filter( Input::file('pic_url_multi') );
-						if(!empty($multi_pics)){
-							foreach ($multi_pics as $value) {
-								$getName = $value->getClientOriginalName();
-								$getSize = $value->getSize();
-								$getPush = $getSize ."-".$getName;
-								$findImg = strpos($listDeleteImg,$getPush);
-								if($findImg !== false) {
-									// Found
-									$listDeleteImg = preg_replace("/$getPush/","",$listDeleteImg,1);
-								} else {
-									// Not found
-									$input['pic_url_multi'] .= ImageHandler::uploadImage($value, 'images');
-								}
-								$input['pic_url_multi'] .= ';';
-							}
-						}
-						$input['pic_url_multi'] = trim($input['pic_url_multi'], ";");
-					} else {
-						unset($input['pic_url_multi']);
-					}*/
 				}
-				
+
 				unset($input['img_url']);
 
 				if(isset($input['vid'])){
@@ -433,20 +405,16 @@ class MediaController extends BaseController {
 				$comment->delete();
 			}
 
-			// if the media type is a gif we need to remove the animation file too.
-			if(strpos($media->pic_url, '.gif') > 0){
-				if(file_exists(Config::get('site.uploads_dir') . 'images/' . str_replace(".gif", "-animation.gif", $media->pic_url))){
-					unlink(Config::get('site.uploads_dir') . 'images/' . str_replace(".gif", "-animation.gif", $media->pic_url));
-				}
-			}
+            $arrayPicUrl = explode("/", $media->pic_url);
+            // if the media type is a gif we need to remove the animation file too.
+            if (strpos($media->pic_url, '.gif') > 0) {
+                \Cloudinary\Uploader::destroy(Constant::FOLDER_CLOUDINARY . '/' . $arrayPicUrl[0] . '/' . pathinfo(str_replace(".gif", "-animation.gif", $media->pic_url), PATHINFO_FILENAME));
+            }
 
-			// remove the image
-			if(file_exists(Config::get('site.uploads_dir') . 'images/' . $media->pic_url)){
-				unlink(Config::get('site.uploads_dir') . 'images/' . $media->pic_url);
-			}
+            // remove the image
+            \Cloudinary\Uploader::destroy(Constant::FOLDER_CLOUDINARY . '/' . $arrayPicUrl[0] . '/' . pathinfo($media->pic_url, PATHINFO_FILENAME));
 
-
-			$media->delete();
+            $media->delete();
 
 		}
 

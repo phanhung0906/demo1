@@ -16,7 +16,13 @@
 	} ?>
 
 
-	<?php $prev_media_list = "<li class='col-md-4'><a href='" . URL::to('media') . '/' . $prev_media->slug . "'><div class='imgLiquidFill imgLiquid " . $isActive . "' style='width:95px; height:95px;'><img alt='...' src='".trim(Config::get('site.uploads_dir') . '/images/' . $prev_media->pic_url)."' /></div></a></li>" . $prev_media_list; ?>
+	<?php $prev_media_list = "<li class='col-md-4'>
+		<a href='" . URL::to('media') . '/' . $prev_media->slug . "'>
+		<div class='imgLiquidFill imgLiquid " . $isActive . "' style='width:95px; height:95px;'>".
+		cl_image_tag(Constant::FOLDER_CLOUDINARY . '/' . $prev_media->pic_url, array( 'alt' => '...')).
+		"</div>
+		</a>
+		</li>" . $prev_media_list; ?>
 
 <?php endforeach; ?>
 
@@ -24,7 +30,13 @@
 
 <?php foreach($media_next as $next_media): ?>
 
-	<li class="col-md-4"><a href="<?= URL::to('media') . '/' . $next_media->slug ?>"><div class="imgLiquidFill imgLiquid <?php if($next_media->id == $media->id): ?> active <?php endif; ?>" style="width:95px; height:95px;"><img alt="..." src="<?=trim(Config::get('site.uploads_dir') . '/images/' . $next_media->pic_url) ?>" /></div></a></li>
+	<li class="col-md-4">
+		<a href="<?= URL::to('media') . '/' . $next_media->slug ?>">
+			<div class="imgLiquidFill imgLiquid <?php if($next_media->id == $media->id): ?> active <?php endif; ?>" style="width:95px; height:95px;">
+				<?php echo cl_image_tag(Constant::FOLDER_CLOUDINARY . '/' . $next_media->pic_url, array( 'alt' => '...')); ?>
+			</div>
+		</a>
+	</li>
 
 <?php endforeach; ?>
 </ul>

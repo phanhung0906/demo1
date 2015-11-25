@@ -69,9 +69,13 @@
 
 					foreach ($img as $value) { ?>
 						<?php if(isset($single) && $single): ?>
-							<img class="single-media margin-bottom" alt="<?= stripslashes($item->title); ?>" src="<?= Config::get('site.uploads_dir') . '/images/' . $value ?>" />
+							<!--<img class="single-media margin-bottom" alt="<?/*= stripslashes($item->title); */?>" src="<?/*= Config::get('site.uploads_dir') . '/images/' . $value */?>" />-->
+							<?php echo cl_image_tag(Constant::FOLDER_CLOUDINARY . '/' . $value, array( 'alt' => stripslashes($item->title), 'class' => 'single-media margin-bottom')); ?>
 						<?php else: ?>
-							<a href="<?= URL::to('media') . '/' . $item->slug; ?>" alt="<?= $item->title ?>"><img class="single-media" alt="<?= stripslashes($item->title); ?>" src="<?= Config::get('site.uploads_dir') . '/images/' . $value ?>" /></a>
+							<a href="<?= URL::to('media') . '/' . $item->slug; ?>" alt="<?= $item->title ?>">
+								<!--<img class="single-media" alt="<?/*= stripslashes($item->title); */?>" src="<?/*= Config::get('site.uploads_dir') . '/images/' . $value */?>" />-->
+								<?php echo cl_image_tag(Constant::FOLDER_CLOUDINARY . '/' . $value, array( 'alt' => stripslashes($item->title), 'class' => 'single-media')); ?>
+							</a>
 						<?php endif; ?>
 			<?php 	} 
 				endif; ?>
@@ -121,6 +125,17 @@
 	<!-- end NSFW IF -->
 
 	<?php if($settings->media_description && isset($item->description) && !empty($item->description)): ?>
-		<p class="media_description"><?= html_entity_decode($item->description) ?></p>
+        <?php
+            $actual_link = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+            if (strpos($actual_link, "$_SERVER[HTTP_HOST]/media/") !== false) : ?>
+                <p class="media_description"><?= html_entity_decode($item->description) ?></p>
+            <?php else: ?>
+            <?php
+            if(strlen(html_entity_decode($item->description)) > 100) {
+                $description = substr(html_entity_decode($item->description), 0, 100) . '...';
+            }
+            ?>
+            <p class="media_description"><?= $description ?></p>
+        <?php endif; ?>
 	<?php endif; ?>
 </div><!-- item-large -->
